@@ -55,8 +55,8 @@ public class DeliveryArea : MonoBehaviour
         // Verificar si el objeto tiene uno de los tags de ingrediente
         string[] ingredientTags = new string[] 
         { 
-            "Pan", "Queso", "Mayonesa", "Jamon", 
-            "Huevo", "Tocino", "Tomate", "Lechuga", "Cebolla" 
+            "Bread", "Cheese", "Pickles", "Ham", 
+            "Egg", "Bacon", "Tomato", "Lettuce", "Onion" 
         };
         
         foreach (string tag in ingredientTags)

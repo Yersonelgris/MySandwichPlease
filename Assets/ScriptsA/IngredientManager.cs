@@ -10,15 +10,15 @@ public class IngredientManager : MonoBehaviour
     // Lista de ingredientes disponibles
     private List<string> availableIngredients = new List<string>()
     {
-        "Pan",
-        "Queso",
-        "Pepinillos",
-        "Jamon",
-        "Huevo",
-        "Tocino",
-        "Tomate",
-        "Lechuga",
-        "Cebolla"
+        "Bread",
+        "Cheese",
+        "Pickles",
+        "Ham",
+        "Egg",
+        "Bacon",
+        "Tomato",
+        "Lettuce",
+        "Onion"
     };
 
     // Configuración para los sándwiches aleatorios

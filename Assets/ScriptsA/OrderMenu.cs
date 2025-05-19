@@ -70,8 +70,8 @@ public class OrderMenu : MonoBehaviour
         // Lista de todos los ingredientes disponibles
         List<string> allIngredients = new List<string>()
         {
-            "Pan", "Queso", "Mayonesa", "Jamon", 
-            "Huevo", "Tocino", "Tomate", "Lechuga", "Cebolla"
+            "Bread", "Cheese", "Pickles", "Ham", 
+            "Egg", "Bacon", "Tomato", "Lettuce", "Onion"
         };
         
         // Siempre incluir pan en el pedido (arriba y abajo)
@@ -93,7 +93,7 @@ public class OrderMenu : MonoBehaviour
             {
                 int randomIndex = Random.Range(0, allIngredients.Count);
                 selectedIngredient = allIngredients[randomIndex];
-            } while (selectedIngredient == "Pan");
+            } while (selectedIngredient == "Bread");
             
             // Añadir el ingrediente al pedido
             newOrder.requiredIngredients.Add(selectedIngredient);
@@ -103,7 +103,7 @@ public class OrderMenu : MonoBehaviour
         }
         
         // Añadir el segundo pan (parte superior del sándwich)
-        newOrder.requiredIngredients.Add("Pan");
+        newOrder.requiredIngredients.Add("Bread");
         
         // Establecer el tiempo límite y los puntos del pedido en función de su complejidad
         newOrder.timeLimit = 30f + (newOrder.requiredIngredients.Count * 5f);
