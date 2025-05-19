@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OrderManager : MonoBehaviour
+public class OrderMenu : MonoBehaviour
 {
     // Lista de pedidos activos
     private List<Order> activeOrders = new List<Order>();

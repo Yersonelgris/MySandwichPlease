@@ -8,7 +8,7 @@ public class DeliveryArea : MonoBehaviour
     private List<GameObject> ingredientsInArea = new List<GameObject>();
     
     // Referencia al sistema de pedidos
-    public OrderManager orderManager;
+    public OrderMenu orderManager;
 
     // Método que se llama cuando un objeto entra en el collider
     private void OnTriggerEnter2D(Collider2D other)
