@@ -11,7 +11,7 @@ public class DeliveryZone : MonoBehaviour
     {
         if (IsIngredientTag(other.tag))
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             deliveredIngredients.Add(other.tag);
             Debug.Log("Ingrediente entregado: " + other.tag);
 
@@ -26,7 +26,7 @@ public class DeliveryZone : MonoBehaviour
 
     private bool IsIngredientTag(string tag)
     {
-        return tag == "Cheese" || tag == "Pickles" || tag == "Bacon"
+        return tag == "Cheese" || tag == "Pickles" || tag == "Bacon" || tag == "Bread"
             || tag == "Ham" || tag == "Egg" || tag == "Tomato" || tag == "Lettuce" || tag == "Onion";
     }
 }

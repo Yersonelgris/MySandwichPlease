@@ -1,15 +1,21 @@
-// OrderManager.cs
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using TMPro;
 
 public class OrderManager : MonoBehaviour
 {
     public List<string> possibleIngredients;
     private List<string> currentOrder;
-    private int score = 0; // Variable para llevar la puntuación
+    private int score = 0;
+    public TextMeshProUGUI orderText;
+    public TextMeshProUGUI scoreText;
 
-    private void Start()
+    void Start()
     {
+        if (scoreText != null)
+            scoreText.text = "" + score;
+
         GenerateNewOrder();
     }
 
@@ -30,13 +36,12 @@ public class OrderManager : MonoBehaviour
             Debug.Log("Correct delivery!");
             score++;
             Debug.Log("Puntuación actual: " + score);
+
+            if (scoreText != null)
+                scoreText.text = "" + score;
+
             GenerateNewOrder();
         }
-        else
-        {
-            Debug.Log("Incorrect delivery.");
-        }
-        deliveredTags.Clear();
     }
 
     private void GenerateNewOrder()
@@ -51,6 +56,12 @@ public class OrderManager : MonoBehaviour
                 currentOrder.Add(ingredient);
         }
 
+        string orderDisplay = "Order: " + string.Join(", ", currentOrder);
         Debug.Log("Nuevo pedido: " + string.Join(", ", currentOrder));
+
+        if (orderText != null)
+            orderText.text = orderDisplay;
     }
+
+
 }

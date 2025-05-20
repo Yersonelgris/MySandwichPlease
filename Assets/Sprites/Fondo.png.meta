@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b0c70845e616cc94fb5c5dfae938ad81
+guid: dae08b49ac378de40806a9d684b91240
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1056848295811256110
-    second: Queso_0
+      213: -5130558894233647175
+    second: Fondo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 420
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Queso_0
+      name: Fondo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 887
-        height: 660
+        width: 900
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2f8e45fcedaaae00800000000000000
-      internalID: 1056848295811256110
+      spriteID: 9b78bf95ed79cc8b0800000000000000
+      internalID: -5130558894233647175
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Queso_0: 1056848295811256110
+      Fondo_0: -5130558894233647175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
