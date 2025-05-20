@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonPlay : MonoBehaviour
 {
@@ -9,10 +10,6 @@ public class ButtonPlay : MonoBehaviour
     {
         Pause(); // Pausar juego al inicio
 
-        if (countdown != null)
-        {
-            countdown.OnCountdownFinished += OnCountdownEnded; // <- Vinculamos evento
-        }
     }
 
     public void Play()
@@ -27,9 +24,10 @@ public class ButtonPlay : MonoBehaviour
         }
     }
 
-    void OnCountdownEnded()
+    public void OnCountdownEnded()
     {
         ResumeGame();
+        StartGameplay("SampleScene");
     }
 
     void ResumeGame()
@@ -41,6 +39,12 @@ public class ButtonPlay : MonoBehaviour
         }
         Debug.Log("Juego reanudado y timer iniciado.");
     }
+
+    void StartGameplay(string nameScene)
+    {
+        SceneManager.LoadScene(nameScene);
+    }
+
 
     public void Pause()
     {

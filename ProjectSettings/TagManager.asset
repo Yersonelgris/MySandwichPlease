@@ -60,5 +60,8 @@ TagManager:
   - name: PanUp
     uniqueID: 975267171
     locked: 0
+  - name: Player
+    uniqueID: 264782613
+    locked: 0
   m_RenderingLayers:
   - Default

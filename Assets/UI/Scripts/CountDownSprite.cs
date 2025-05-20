@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class CountDownSprite : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class CountDownSprite : MonoBehaviour
     public Sprite[] countdownSprites;
     public float scaleDuration = 0.3f;
 
-    public Action OnCountdownFinished; // <- NUEVO
+    public UnityEvent OnCountdownFinished; // <- NUEVO
 
     public void StartCountdown()
     {
@@ -44,7 +45,7 @@ public class CountDownSprite : MonoBehaviour
             float t = 0f;
             while (t < scaleDuration)
             {
-                float scale = Mathf.Lerp(0f, 0.5f, t / scaleDuration);
+                float scale = Mathf.Lerp(0f, 0.2f, t / scaleDuration);
                 countdownImage.transform.localScale = new Vector3(scale, scale, scale);
                 t += Time.unscaledDeltaTime;
                 yield return null;
@@ -53,7 +54,7 @@ public class CountDownSprite : MonoBehaviour
             t = 0f;
             while (t < scaleDuration)
             {
-                float scale = Mathf.Lerp(0.5f, 0f, t / scaleDuration);
+                float scale = Mathf.Lerp(0.2f, 0f, t / scaleDuration);
                 countdownImage.transform.localScale = new Vector3(scale, scale, scale);
                 t += Time.unscaledDeltaTime;
                 yield return null;
@@ -66,4 +67,6 @@ public class CountDownSprite : MonoBehaviour
 
         OnCountdownFinished?.Invoke(); // <- Aquí llamamos el evento
     }
+
+
 }
