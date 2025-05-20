@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Lettuce
-  - Bread
-  - Cheese
-  - Bacon
-  - Ham
-  - Egg
-  - Tomato
-  - Onion
-  - Pickles
-  - Destroyer
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Floor
-  - Food
+  - 
+  - 
   - 
   - 
   - 
@@ -50,18 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: PanB
-    uniqueID: 1184138637
-    locked: 0
-  - name: Food
-    uniqueID: 2934099047
-    locked: 0
-  - name: PanUp
-    uniqueID: 975267171
-    locked: 0
-  - name: Player
-    uniqueID: 264782613
     locked: 0
   m_RenderingLayers:
   - Default
