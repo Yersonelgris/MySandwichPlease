@@ -17,6 +17,7 @@ public class ObjectPoolSpawnManager : MonoBehaviour
     public float intervalo = 2f;
 
     private List<GameObject> pool = new List<GameObject>();
+    private int currentPrefabIndex = 0; // Índice para el prefab actual
 
     void Start()
     {
@@ -55,18 +56,22 @@ public class ObjectPoolSpawnManager : MonoBehaviour
 
     GameObject ObtenerObjetoDelPool()
     {
-        // Selecciona un prefab al azar y busca una instancia inactiva de ese tipo
-        int prefabIndex = Random.Range(0, prefabs.Length);
-        string nombrePrefab = prefabs[prefabIndex].name;
+        // Obtener el nombre del prefab actual
+        string nombrePrefab = prefabs[currentPrefabIndex].name;
 
+        // Buscar una instancia inactiva del prefab actual
         foreach (GameObject obj in pool)
         {
             if (!obj.activeInHierarchy && obj.name.StartsWith(nombrePrefab))
             {
+                // Avanzar al siguiente prefab para la próxima vez
+                currentPrefabIndex = (currentPrefabIndex + 1) % prefabs.Length;
                 return obj;
             }
         }
 
-        return null; // Si no hay objetos disponibles
+        // Si no hay objetos disponibles del prefab actual, avanzar al siguiente y retornar null
+        currentPrefabIndex = (currentPrefabIndex + 1) % prefabs.Length;
+        return null;
     }
 }

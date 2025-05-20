@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OrderManager : MonoBehaviour
 {
@@ -63,5 +64,10 @@ public class OrderManager : MonoBehaviour
             orderText.text = orderDisplay;
     }
 
-
+    public void EndGame()
+    {
+        PlayerPrefs.SetInt("FinalScore", score);
+        PlayerPrefs.Save(); // Guarda los cambios
+        SceneManager.LoadScene("GameOver"); // Cambia a la escena GameOver
+    }
 }
