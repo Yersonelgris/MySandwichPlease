@@ -1,27 +1,50 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+
 public class ButtonPlay : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public CountDownSprite countdown;
+    public Timer timerScript; // <- Asumiendo que tienes un script de timer
+
     void Start()
     {
-        Pause ();
-    }
-    public void Play ()
-    {
-        Time.timeScale = 1;
-        Debug.Log("Juego reanudado: " + (Time.timeScale == 1));
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void Pause()
-    {
-    Time.timeScale = 0;
-    Debug.Log("Juego pausado: " + (Time.timeScale == 0));
+        Pause(); // Pausar juego al inicio
+
+        if (countdown != null)
+        {
+            countdown.OnCountdownFinished += OnCountdownEnded; // <- Vinculamos evento
+        }
     }
 
+    public void Play()
+    {
+        if (countdown != null)
+        {
+            countdown.StartCountdown(); // Empieza cuenta regresiva
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
+
+    void OnCountdownEnded()
+    {
+        ResumeGame();
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        if (timerScript != null)
+        {
+            timerScript.StartTimer(); // <- Asumiendo que tiene este método
+        }
+        Debug.Log("Juego reanudado y timer iniciado.");
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        Debug.Log("Juego pausado");
+    }
 }
