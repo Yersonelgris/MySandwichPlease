@@ -211,6 +211,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117476775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8703822361484538538, guid: c070d83929eb01243b7ee515d9a55bee, type: 3}
+  m_PrefabInstance: {fileID: 7023814560155423308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd17c706015257469f0b8646e30cc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1215228218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2391634237065074014, guid: c070d83929eb01243b7ee515d9a55bee, type: 3}
+  m_PrefabInstance: {fileID: 7023814560155423308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918b576b1cd24dd4193b60ece47d4f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1533632165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,6 +321,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7653979071695332786, guid: 7124266ec7ec0294e8bd399e5f309a75, type: 3}
+      propertyPath: countdown
+      value: 
+      objectReference: {fileID: 1215228218}
+    - target: {fileID: 7653979071695332786, guid: 7124266ec7ec0294e8bd399e5f309a75, type: 3}
+      propertyPath: timerScript
+      value: 
+      objectReference: {fileID: 1117476775}
     - target: {fileID: 8560420404014197453, guid: 7124266ec7ec0294e8bd399e5f309a75, type: 3}
       propertyPath: m_Name
       value: Canvas
