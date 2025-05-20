@@ -36,18 +36,6 @@ public class PlayerController : MonoBehaviour
     {
         // Capturar input horizontal (teclas A/D o flechas izquierda/derecha)
         movimientoHorizontal = Input.GetAxisRaw("Horizontal");
-
-        // Voltear el sprite según la dirección
-        if (movimientoHorizontal > 0)
-        {
-            // Mirando a la derecha
-            spriteRenderer.flipX = false;
-        }
-        else if (movimientoHorizontal < 0)
-        {
-            // Mirando a la izquierda
-            spriteRenderer.flipX = true;
-        }
     }
 
     // FixedUpdate se usa para cálculos de física
