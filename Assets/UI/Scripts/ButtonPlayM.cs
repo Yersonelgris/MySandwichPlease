@@ -27,7 +27,7 @@ public class ButtonPlay : MonoBehaviour
     public void OnCountdownEnded()
     {
         ResumeGame();
-        StartGameplay("SampleScene");
+        StartGameplay("InitScene");
     }
 
     void ResumeGame()
